@@ -3,17 +3,13 @@ package allTests;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import parentTest.ParentTest;
-
-import java.util.concurrent.TimeUnit;
-
 import static org.junit.Assert.assertTrue;
-import static pages.ParentPage.baseUrl;
 
 public class YourLocationSwitcherTest extends ParentTest {
+
     @Test
     public void YourLocationSwitcherTest() {
         WebElement switcher = webDriver.findElement(By.xpath("//div[@class='desk__lang-switcher']"));
@@ -29,9 +25,8 @@ public class YourLocationSwitcherTest extends ParentTest {
 //                .click()
 //                .build().perform();
 
-        WebElement inscription = webDriver.findElement(By.xpath(".//h2[contains(text(),'Sweden')]"));
+        WebElement inscription = webDriver.findElement(By.xpath("//h2[contains(text(),'Sweden')]"));
         webDriverWait.until(ExpectedConditions.visibilityOf(inscription));
         assertTrue(actions.isElementDisplayed(inscription));
-
     }
 }
