@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import parentTest.ParentTest;
+
 import static org.junit.Assert.assertTrue;
 
 public class YourLocationSwitcherTest extends ParentTest {
@@ -14,16 +15,18 @@ public class YourLocationSwitcherTest extends ParentTest {
     public void YourLocationSwitcherTest() {
         WebElement switcher = webDriver.findElement(By.xpath("//div[@class='desk__lang-switcher']"));
         WebElement countryDropDown = webDriver.findElement(By.xpath("//select[@onchange='postCountry(this.value)' and @class='desk__selector__select']"));
-        WebElement chooseSweden = webDriver.findElement(By.xpath("//select//option[text()='Sweden']"));
+        WebElement chooseSweden = webDriver.findElement(By.xpath("//*[@id='vapp']/header/nav/div[4]/div[1]/div[2]/div/div[1]/div[2]/select/option[text()='Sweden']"));
 
         Actions action = new Actions(webDriver);
         action.moveToElement(switcher).moveToElement(countryDropDown)
                 .click().pause(3000).perform();
-        webDriver.findElement(By.xpath("//select//option[text()='Sweden']")).click();
+        webDriver.findElement(By.xpath(".//*[@id='vapp']/header/nav/div[4]/div[1]/div[2]/div/div[1]/div[2]/select/option[text()='Sweden']")).click();
 //        chooseSweden.click();
+
 //                action.moveToElement(chooseSweden)
 //                .click()
 //                .build().perform();
+//        webDriverWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//h2[contains(text(),'Sweden')]")));
 
         WebElement inscription = webDriver.findElement(By.xpath("//h2[contains(text(),'Sweden')]"));
         webDriverWait.until(ExpectedConditions.visibilityOf(inscription));
