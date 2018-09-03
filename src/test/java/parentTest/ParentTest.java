@@ -55,15 +55,4 @@ public class ParentTest {
     public void tearDown() {
         webDriver.quit();
     }
-
-    //метод Acceptance Criteria
-    @Step
-    protected void checkAC(String message, boolean actual, boolean expected) {
-        if (actual != expected) {
-            logger.error("AC failed: " + message);
-            {
-                Assert.assertEquals(message, expected, actual);
-            }
-        }
-    }
 }

@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 public abstract class ParentPage {
     Logger logger = Logger.getLogger(getClass());
     WebDriver webDriver;
-    String expectedUrl;
+    String additionalUrl;
     protected static ConfigProperties configProperties = ConfigFactory.create(ConfigProperties.class);
     public static String baseUrl = configProperties.base_url();
     ActionsWithOurElements actionsWithOurElements;
@@ -19,7 +19,7 @@ public abstract class ParentPage {
 
     public ParentPage(WebDriver webDriver, String additionalUrl) {
         this.webDriver = webDriver;
-        this.expectedUrl = baseUrl + additionalUrl; // ожидаемый урл напр. /login
+        this.additionalUrl = baseUrl + additionalUrl; // ожидаемый урл напр. /login
         PageFactory.initElements(webDriver, this);
         actionsWithOurElements = new ActionsWithOurElements(webDriver);
     }
@@ -32,7 +32,7 @@ public abstract class ParentPage {
     //метод, который сравнивает известный нам урл с фактическим
     public void checkCurrentUrl() {
         try {
-            Assert.assertEquals("Url is not expected", expectedUrl, getCurrentUrl());
+            Assert.assertEquals("Url is not expected", additionalUrl, getCurrentUrl());
         } catch (Exception e) {
             logger.error("Cannot work with Url"); //выведется, если в try будет exception
             Assert.fail("Cannot work with Url");

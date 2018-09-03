@@ -67,7 +67,7 @@ Actual Results: As Expected
 Pass/Fail: Pass
 
 .//span[contains(text(),'See other casinos')]
-.//ul//li[1]//li[1]//a//span[contains(text(),'Casino Reviews')]
+.//h1[contains(text(),'Online Casino Reviews and Ratings')]
 
 ======================================================================
 Test Case ID 5

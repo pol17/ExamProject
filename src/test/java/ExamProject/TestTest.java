@@ -1,4 +1,4 @@
-package allTests;
+package ExamProject;
 
 import org.apache.log4j.Logger;
 import org.junit.Test;

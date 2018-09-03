@@ -26,12 +26,4 @@ public class HomePage extends ParentPage {
             return false;
         }
     }
-
-//    public void clickOnMenuDictionary() {
-//        actionsWithOurElements.clickOnElement(menuDictionary);
-//    }
-
-//    public void clickOnSubMenuSpares() {
-//        actionsWithOurElements.clickOnElement(subMenuSpare);
-    }
-//}
+}
