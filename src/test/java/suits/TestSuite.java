@@ -17,5 +17,5 @@ import org.junit.runners.Suite;
         }
 )
 
-public class TestSiute {
+public class TestSuite {
 }
