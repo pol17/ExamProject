@@ -13,9 +13,9 @@ public class YourLocationSwitcherTest extends ParentTest {
 
     @Test
     public void YourLocationSwitcherTest() {
-        WebElement switcher = webDriver.findElement(By.xpath("//div[@class='desk__lang-switcher']"));
-        WebElement countryDropDown = webDriver.findElement(By.xpath("//select[@onchange='postCountry(this.value)' and @class='desk__selector__select']"));
-        WebElement chooseSwedenInDropDown = webDriver.findElement(By.xpath("//*[@id='vapp']/header/nav/div[4]/div[1]/div[2]/div/div[1]/div[2]/select/option[text()='Sweden']"));
+        WebElement switcher = webDriver.findElement(By.xpath(".//div[@class='desk__lang-switcher']"));
+        WebElement countryDropDown = webDriver.findElement(By.xpath(".//select[@onchange='postCountry(this.value)' and @class='desk__selector__select']"));
+        WebElement chooseSwedenInDropDown = webDriver.findElement(By.xpath(".//*[@id='vapp']/header/nav/div[4]/div[1]/div[2]/div/div[1]/div[2]/select/option[text()='Sweden']"));
 
         Actions action = new Actions(webDriver);
         action.moveToElement(switcher).moveToElement(countryDropDown)

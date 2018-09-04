@@ -45,9 +45,9 @@ Expected Results: The page should be reboot for swedish users (Sweden in "Your L
 Actual Results: As Expected
 Pass/Fail: Pass
 
-//div[@class='desk__lang-switcher']
-//select[@onchange='postCountry(this.value)' and @class='desk__selector__select']
-.//select//option[text()='Sweden']
+.//div[@class='desk__lang-switcher']
+.//select[@onchange='postCountry(this.value)' and @class='desk__selector__select']
+.//*[@id='vapp']/header/nav/div[4]/div[1]/div[2]/div/div[1]/div[2]/select/option[text()='Sweden']
 .//h2[contains(text(),'Sweden')]
 
 ======================================================================
