@@ -12,14 +12,16 @@ import static org.junit.Assert.assertTrue;
 public class YourLocationSwitcherTest extends ParentTest {
 
     @Test
-    public void YourLocationSwitcherTest() {
+    public void YourLocationSwitcherTest() throws InterruptedException {
         WebElement switcher = webDriver.findElement(By.xpath(".//div[@class='desk__lang-switcher']"));
         WebElement countryDropDown = webDriver.findElement(By.xpath(".//select[@onchange='postCountry(this.value)' and @class='desk__selector__select']"));
-        WebElement chooseSwedenInDropDown = webDriver.findElement(By.xpath(".//*[@id='vapp']/header/nav/div[4]/div[1]/div[2]/div/div[1]/div[2]/select/option[text()='Sweden']"));
+        WebElement chooseSwedenInDropDown = webDriver.findElement(By.xpath(".//*[@id='vapp']/header/nav/div[4]/div[1]/div[2]/div/div[1]/div[2]/select"));
 
         Actions action = new Actions(webDriver);
         action.moveToElement(switcher).moveToElement(countryDropDown)
-                .click().pause(3000).perform();
+//                .click()
+                .pause(3000).perform();
+        Thread.sleep(3000);
         Select chooseSweden = new Select(chooseSwedenInDropDown);
         chooseSweden.selectByVisibleText("Sweden");
 //        webDriver.findElement(By.xpath(".//*[@id='vapp']/header/nav/div[4]/div[1]/div[2]/div/div[1]/div[2]/select/option[text()='Sweden']")).click();
@@ -29,7 +31,7 @@ public class YourLocationSwitcherTest extends ParentTest {
 //                .click()
 //                .build().perform();
 //        webDriverWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//h2[contains(text(),'Sweden')]")));
-
+        Thread.sleep(3000);
         WebElement inscription = webDriver.findElement(By.xpath("//h2[contains(text(),'Sweden')]"));
         webDriverWait.until(ExpectedConditions.visibilityOf(inscription));
         assertTrue(actions.isElementDisplayed(inscription));
