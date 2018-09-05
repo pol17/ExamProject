@@ -11,8 +11,8 @@ public class LoginWindowTest extends ParentTest {
 
     @Test
     public void LoginWindowTest() {
-        webDriver.findElement(By.xpath(".//span[contains(text(),'Login')]")).click();
-        WebElement inscription = webDriver.findElement(By.xpath(".//p[contains(text(),'LOGIN')]"));
+        webDriver.findElement(By.xpath("//span[contains(text(),'Login')]")).click();
+        WebElement inscription = webDriver.findElement(By.xpath("//p[contains(text(),'LOGIN')]"));
         webDriverWait.until(ExpectedConditions.visibilityOf(inscription));
         assertTrue(actions.isElementDisplayed(inscription));
     }

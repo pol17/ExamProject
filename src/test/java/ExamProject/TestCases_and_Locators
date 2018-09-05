@@ -9,8 +9,8 @@ Expected Results: Pop-up window should appear with LOGIN form
 Actual Results: As Expected
 Pass/Fail: Pass
 
-.//span[contains(text(),'Login')]
-.//p[contains(text(),'LOGIN')]
+//span[contains(text(),'Login')]
+//p[contains(text(),'LOGIN')]
 
 ======================================================================
 Test Case ID 2
@@ -25,8 +25,8 @@ Expected Results: User should go into https://holymolycasinos.com/de/
 Actual Results: As Expected
 Pass/Fail: Pass
 
-.//footer//div[2]//nav//ul[3]//li[5]//a[@href='/de/']
-.//span[contains(text(),'Anmelden')]
+//footer//div[2]//nav//ul[3]//li[5]//a[@href='/de/']
+//span[contains(text(),'Anmelden')]
 
 ======================================================================
 Test Case ID 3
@@ -45,10 +45,10 @@ Expected Results: The page should be reboot for swedish users (Sweden in "Your L
 Actual Results: As Expected
 Pass/Fail: Pass
 
-.//div[@class='desk__lang-switcher']
-.//select[@onchange='postCountry(this.value)' and @class='desk__selector__select']
-.//*[@id='vapp']/header/nav/div[4]/div[1]/div[2]/div/div[1]/div[2]/select/option[text()='Sweden']
-.//h2[contains(text(),'Sweden')]
+//div[@class='desk__lang-switcher']
+//select[@onchange='postCountry(this.value)' and @class='desk__selector__select']
+//*[@id='vapp']/header/nav/div[4]/div[1]/div[2]/div/div[1]/div[2]/select"
+//h2[contains(text(),'Sweden')]
 
 ======================================================================
 Test Case ID 4
@@ -66,8 +66,8 @@ Expected Results: User should go into https://holymolycasinos.com/casinos
 Actual Results: As Expected
 Pass/Fail: Pass
 
-.//span[contains(text(),'See other casinos')]
-.//h1[contains(text(),'Online Casino Reviews and Ratings')]
+//span[contains(text(),'See other casinos')]
+//h1[contains(text(),'Online Casino Reviews and Ratings')]
 
 ======================================================================
 Test Case ID 5
@@ -80,4 +80,4 @@ Expected Results: "Casibon" casino is Closed (there is button "Closed" on the pa
 Actual Results: As Expected
 Pass/Fail: Pass
 
-.//button//span[contains(text(),'Closed')]
+//button//span[contains(text(),'Closed')]

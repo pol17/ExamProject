@@ -15,7 +15,7 @@ public class ClosedCasinoTest extends ParentTest {
 //        webDriver.get("https://holymolycasinos.com/casino/casibon-casino-review");
         String additionalUrl = new String(("casino/casibon-casino-review"));
         webDriver.get(baseUrl+additionalUrl);
-        WebElement inscription = webDriver.findElement(By.xpath(".//button//span[contains(text(),'Closed')]"));
+        WebElement inscription = webDriver.findElement(By.xpath("//button//span[contains(text(),'Closed')]"));
         webDriverWait.until(ExpectedConditions.visibilityOf(inscription));
         assertTrue(actions.isElementDisplayed(inscription));
     }

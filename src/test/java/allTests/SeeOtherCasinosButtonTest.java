@@ -11,8 +11,8 @@ public class SeeOtherCasinosButtonTest extends ParentTest {
 
     @Test
     public void SeeOtherCasinosButtonTest() {
-        webDriver.findElement(By.xpath(".//span[contains(text(),'See other casinos')]")).click();
-        WebElement inscription = webDriver.findElement(By.xpath(".//h1[contains(text(),'Online Casino Reviews and Ratings')]"));
+        webDriver.findElement(By.xpath("//span[contains(text(),'See other casinos')]")).click();
+        WebElement inscription = webDriver.findElement(By.xpath("//h1[contains(text(),'Online Casino Reviews and Ratings')]"));
         webDriverWait.until(ExpectedConditions.visibilityOf(inscription));
         assertTrue(actions.isElementDisplayed(inscription));
     }
