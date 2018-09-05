@@ -1,9 +1,6 @@
 package suits;
 
-import allTests.ClosedCasinoTest;
-import allTests.GermanLocalisationSwitcherTest;
-import allTests.LoginWindowTest;
-import allTests.SeeOtherCasinosButtonTest;
+import allTests.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -13,7 +10,8 @@ import org.junit.runners.Suite;
                 ClosedCasinoTest.class,
                 GermanLocalisationSwitcherTest.class,
                 LoginWindowTest.class,
-                SeeOtherCasinosButtonTest.class
+                SeeOtherCasinosButtonTest.class,
+                YourLocationSwitcherTest.class
         }
 )
 
