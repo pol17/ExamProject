@@ -11,8 +11,8 @@ public class GermanLocalisationSwitcherTest extends ParentTest {
 
     @Test
     public void GermanLocalisationSwitcherTest() {
-        webDriver.findElement(By.xpath("//footer//div[2]//nav//ul[3]//li[5]//a[@href='/de/']")).click();
-        WebElement inscription = webDriver.findElement(By.xpath("//span[contains(text(),'Anmelden')]"));
+        webDriver.findElement(By.xpath("//*[@id=\"vapp\"]/section/footer/div/div[6]/li/a[1]")).click();
+        WebElement inscription = webDriver.findElement(By.xpath("//*[@id=\"vapp\"]/content/div/div/div/main/div/div/div[1]/div[2]/div/h1"));
         webDriverWait.until(ExpectedConditions.visibilityOf(inscription));
         assertTrue(actions.isElementDisplayed(inscription));
     }
